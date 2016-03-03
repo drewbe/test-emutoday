@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/emutoday":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/emutoday","hostpath":"/Users/ext_dbeaman/SITES/Code/emu/emutoday","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/ext_dbeaman/SITES/Code/emu/emutoday","disabled":false,"__vagrantfile":true}}}
