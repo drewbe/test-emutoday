@@ -26,8 +26,14 @@ Route::group(['middleware' => ['web']], function() {
     Route::get('backend/blog/{blog}/confirm', ['as' => 'backend.blog.confirm', 'uses' => 'Backend\BlogController@confirm']);
     Route::resource('backend/blog', 'Backend\BlogController');
 
+    Route::get('backend/story/{story}/confirm', ['as' => 'backend.story.confirm', 'uses' => 'Backend\StoryController@confirm']);
+    Route::resource('backend/story', 'Backend\StoryController');
+
+    Route::resource('backend/storyimages', 'Backend\StoryImageController');
+
+
     Route::get('backend/dashboard', ['as' => 'backend.dashboard', 'uses' => 'Backend\DashboardController@index']);
 
 
-    
+
 });

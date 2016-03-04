@@ -11,7 +11,9 @@
         "lewis/presenter": "^1.0",
         "baum/baum": "^1.1",
         "league/commonmark": "^0.13.0",
-        "nesbot/carbon": "^1.21"
+        "nesbot/carbon": "^1.21",
+        "doctrine/dbal": "^2.5",
+        "intervention/image": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

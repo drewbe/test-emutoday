@@ -48,70 +48,70 @@ class BlogController extends Controller
     {
         $this->posts->create(
         ['author_id' => auth()->user()->id] + $request->only('title', 'slug', 'published_at', 'body', 'excerpt')
-    );
+        );
 
-    return redirect(route('backend.blog.index'))->with('status', 'Post has been created.');
-}
+        return redirect(route('backend.blog.index'))->with('status', 'Post has been created.');
+    }
 
-/**
-* Display the specified resource.
-*
-* @param  int  $id
-* @return \Illuminate\Http\Response
-*/
-public function show($id)
-{
-    //
-}
+    /**
+    * Display the specified resource.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function show($id)
+    {
+        //
+    }
 
-/**
-* Show the form for editing the specified resource.
-*
-* @param  int  $id
-* @return \Illuminate\Http\Response
-*/
-public function edit($id)
-{
-    $post = $this->posts->findOrFail($id);
+    /**
+    * Show the form for editing the specified resource.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function edit($id)
+    {
+        $post = $this->posts->findOrFail($id);
 
-    return view('backend.blog.form', compact('post'));
-}
+        return view('backend.blog.form', compact('post'));
+    }
 
-/**
-* Update the specified resource in storage.
-*
-* @param  \Illuminate\Http\Request  $request
-* @param  int  $id
-* @return \Illuminate\Http\Response
-*/
-public function update(Requests\UpdatePostRequest $request, $id)
-{
-    $post = $this->posts->findOrFail($id);
+    /**
+    * Update the specified resource in storage.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function update(Requests\UpdatePostRequest $request, $id)
+    {
+        $post = $this->posts->findOrFail($id);
 
-    $post->fill($request->only('title', 'slug', 'published_at', 'body', 'excerpt'))->save();
+        $post->fill($request->only('title', 'slug', 'published_at', 'body', 'excerpt'))->save();
 
-    return redirect(route('backend.blog.edit', $post->id))->with('status', 'Post has been updated.');
-}
+        return redirect(route('backend.blog.edit', $post->id))->with('status', 'Post has been updated.');
+    }
 
-public function confirm($id)
-{
-    $post = $this->posts->findOrFail($id);
+    public function confirm($id)
+    {
+        $post = $this->posts->findOrFail($id);
 
-    return view('backend.blog.confirm', compact('post'));
-}
+        return view('backend.blog.confirm', compact('post'));
+    }
 
-/**
-* Remove the specified resource from storage.
-*
-* @param  int  $id
-* @return \Illuminate\Http\Response
-*/
-public function destroy($id)
-{
-    $post = $this->posts->findOrFail($id);
+    /**
+    * Remove the specified resource from storage.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function destroy($id)
+    {
+        $post = $this->posts->findOrFail($id);
 
-    $post->delete();
+        $post->delete();
 
-    return redirect(route('backend.blog.index'))->with('status', 'Post has been deleted.');
-}
+        return redirect(route('backend.blog.index'))->with('status', 'Post has been deleted.');
+    }
 }

@@ -126,6 +126,7 @@ return [
         Baum\Providers\BaumServiceProvider::class,
         Lewis\Presenter\PresenterServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Laravel Framework Service Providers...
          */
@@ -206,6 +207,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'Form'      => Collective\Html\FormFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+
 
 
     ],

@@ -17,6 +17,7 @@ return [
     emutoday\Page::class => emutoday\Presenters\PagePresenter::class,
     emutoday\Post::class => emutoday\Presenters\PostPresenter::class,
     emutoday\User::class => emutoday\Presenters\UserPresenter::class,
+    emutoday\Story::class => emutoday\Presenters\StoryPresenter::class,
 
 
 ];
