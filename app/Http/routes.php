@@ -29,7 +29,10 @@ Route::group(['middleware' => ['web']], function() {
     Route::get('backend/story/{story}/confirm', ['as' => 'backend.story.confirm', 'uses' => 'Backend\StoryController@confirm']);
     Route::resource('backend/story', 'Backend\StoryController');
 
+
+    Route::get('backend/storyimages/{storyimages}/confirm', ['as' => 'backend.storyimages.confirm', 'uses' => 'backend\StoryImageController@confirm']);
     Route::resource('backend/storyimages', 'Backend\StoryImageController');
+
 
 
     Route::get('backend/dashboard', ['as' => 'backend.dashboard', 'uses' => 'Backend\DashboardController@index']);

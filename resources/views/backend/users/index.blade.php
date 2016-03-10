@@ -1,10 +1,10 @@
-@extends('layouts.backend');
+@extends('layouts.backend')
 
 @section('title', 'Users')
 
     @section('content')
         <a href="{{ route('backend.users.create') }}" class="btn btn-primary">Create New User</a>
-        
+
     <table class="table table-hover">
         <thead>
             <tr>

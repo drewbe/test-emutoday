@@ -13,7 +13,7 @@ class StoryImage_UpdateRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class StoryImage_UpdateRequest extends Request
     public function rules()
     {
         return [
-            //
-        ];
+      'is_active' => 'boolean',
+      'is_featured' => 'boolean',
+      'image' => 'mimes:jpeg,jpg,bmp,png | max:1000'
+  ];
     }
 }

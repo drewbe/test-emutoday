@@ -20,6 +20,7 @@
                      <li><a href="{{ route('backend.pages.index') }}">Pages</a></li>
                      <li><a href="{{ route('backend.blog.index') }}">Blog Posts</a></li>
                     <li><a href="{{ route('backend.story.index') }}">Story Posts</a></li>
+                      <li><a href="{{ route('backend.storyimages.index') }}">Story Images</a></li>
                  </ul>
                  <ul class="nav navbar-nav navbar-right">
                      <li><span class="navbar-text">Hello, {{ $admin->name }}</span></li>

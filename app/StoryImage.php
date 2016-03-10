@@ -3,6 +3,7 @@
 namespace emutoday;
 
 use Illuminate\Database\Eloquent\Model;
+use emutoday\Story;
 
 class StoryImage extends Model
 {
@@ -14,11 +15,14 @@ class StoryImage extends Model
                             'caption',
                             'teaser',
                             'moretext',
-                            'image_extension',
-                            'mobile_image_name',
-                            'mobile_image_path',
-                            'mobile_extension'
+                            'image_extension'
     ];
+    /**
+        * All of the relationships to be touched.
+        *
+        * @var array
+        */
+       protected $touches = ['story'];
 
     public function story()
     {

@@ -3,6 +3,7 @@
 namespace emutoday;
 
 use Illuminate\Database\Eloquent\Model;
+use emutoday\StoryImage;
 
 class Story extends Model
 {
@@ -19,5 +20,10 @@ class Story extends Model
     public function author()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function storyImages()
+    {
+        return $this->hasMany(StoryImage::class);
     }
 }
